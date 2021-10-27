@@ -1,9 +1,18 @@
-import pandas as pd
-from pathlib import Path
-
-
 ########################################################################################################################
 ########################################### Script to create and store hdf5 data########################################
+# in main.py:
+# from hdf import write_hdf as hdf
+# import time
+#
+# t0 = time.monotonic()
+#
+# hdf()
+#
+# t1 = time.monotonic()
+# elapsed = t1-t0
+# print(f'...done, executed in: {elapsed}s')
+
+
 # case 1: new data starts at the day/time where store ends --> just append
 # case 2: new data starts at the day/time way after store ends --> we just append and give back what dates are missing
 # to check for holiday etc
@@ -28,6 +37,11 @@ from pathlib import Path
 #              -->(AlternativeData)
 ########################################################################################################################
 ########################################################################################################################
+
+
+import pandas as pd
+from pathlib import Path
+
 
 
 # Entry Point-import this module and call write_hdf()
